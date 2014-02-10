@@ -52,7 +52,7 @@
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="Contacts">
-                <param name="android-package" value="org.apache.cordova.contacts.ContactManager"/>
+                <param name="android-package" value="org.apache.cordova.contacts.FHContactManager"/>
             </feature>
         </config-file>
 
@@ -62,9 +62,14 @@
             <uses-permission android:name="android.permission.GET_ACCOUNTS" />
         </config-file>
 
+        <js-module src="www/android/contacts.js" name="contacts-android">
+            <merges target="navigator.contacts" />
+        </js-module>
+
         <source-file src="src/android/ContactAccessor.java" target-dir="src/org/apache/cordova/contacts" />
         <source-file src="src/android/ContactAccessorSdk5.java" target-dir="src/org/apache/cordova/contacts" />
         <source-file src="src/android/ContactManager.java" target-dir="src/org/apache/cordova/contacts" />
+        <source-file src="src/android/FH/FHContactManager.java" target-dir="src/org/apache/cordova/contacts" />
     </platform>
 
     <!-- amazon-fireos -->

@@ -28,7 +28,7 @@ import android.util.Log;
 
 public class ContactManager extends CordovaPlugin {
 
-    private ContactAccessor contactAccessor;
+    protected ContactAccessor contactAccessor;
     private static final String LOG_TAG = "Contact Query";
 
     public static final int UNKNOWN_ERROR = 0;
